@@ -15,20 +15,26 @@ software-engineering-and-applied-ai/
     │   ├── index.js                             # Core model construction, training, and prediction
     │   └── package.json                         # Node dependencies (TensorFlow.js for Node)
     │
-    ├── exemplo-01-ecommerce-recomendations/     # E-commerce Recommendation System (Web)
+    ├── example-01-ecommerce-recomendations/     # E-commerce Recommendation System (Web)
     │   ├── index.html                           # Main storefront user interface
     │   ├── style.css                            # Clean, modern user interface styles
     │   ├── data/                                # Local datasets (users and products JSONs)
     │   ├── service/                             # Business logic and session handling
     │   └── README.md                            # Setup and features documentation
     │
-    └── exemplo-02-vencendo-qualquer-jogo/       # AI-Powered Duck Hunt Game (Computer Vision)
-        ├── src/                                 # Game source code (PixiJS rendering engine)
-        ├── machine-learning/                    # Computer vision (YOLOv5) integration
-        │   ├── main.js                          # AI main controller & canvas capture loop
-        │   ├── worker.js                        # Multi-threaded Web Worker for YOLOv5 inference
-        │   └── layout.js                        # HUD design for real-time predictions and statistics
-        └── README.md                            # Detailed documentation on game mechanics & dependencies
+    ├── example-02-vencendo-qualquer-jogo/       # AI-Powered Duck Hunt Game (Computer Vision)
+    │   ├── src/                                 # Game source code (PixiJS rendering engine)
+    │   ├── machine-learning/                    # Computer vision (YOLOv5) integration
+    │   │   ├── main.js                          # AI main controller & canvas capture loop
+    │   │   ├── worker.js                        # Multi-threaded Web Worker for YOLOv5 inference
+    │   │   └── layout.js                        # HUD design for real-time predictions and statistics
+    │   └── README.md                            # Detailed documentation on game mechanics & dependencies
+    │
+    ├── example-03-webai-01/                     # Basic Web AI Integration Demo
+    │
+    ├── example-04-webai02-temperature-and-topK/ # Web AI with Temperature & Top K Controls
+    │
+    └── example-05-webai03-multimodal/           # Multimodal Web AI (Image/Audio + Text)
 ```
 
 > [!NOTE]
@@ -52,7 +58,7 @@ An introductory project designed to demonstrate the fundamentals of deep neural 
 
 ---
 
-### 🛒 2. `exemplo-01-ecommerce-recomendations` — E-commerce Recommendation Flow
+### 🛒 2. `example-01-ecommerce-recomendations` — E-commerce Recommendation Flow
 A dynamic web application showcasing a modern storefront where user interactions are tracked to build data pipelines for future machine learning recommendation systems.
 
 - **The Flow:**
@@ -63,7 +69,7 @@ A dynamic web application showcasing a modern storefront where user interactions
 
 ---
 
-### 🦆 3. `exemplo-02-vencendo-qualquer-jogo` — YOLOv5-Powered Duck Hunt AI
+### 🦆 3. `example-02-vencendo-qualquer-jogo` — YOLOv5-Powered Duck Hunt AI
 A high-performance implementation of the classic **Duck Hunt** game built on **PixiJS** (WebGL/Canvas rendering), supercharged with a real-time computer vision cheat agent that automatically detects and shoots targets.
 
 #### ⚡ High-Performance Architecture
@@ -95,6 +101,21 @@ graph TD
 
 ---
 
+### 🤖 4. `example-03-webai-01` — Minimal Web AI Integration
+A simple vanilla HTML/JS application demonstrating the use of the `LanguageModel` API to generate responses directly in the browser.
+
+---
+
+### 🎛️ 5. `example-04-webai02-temperature-and-topK` — Prompt Tuning Web AI
+A demonstration of parameter tuning in Web AI, allowing users to adjust `Temperature` and `Top K` via UI sliders to control the model's creativity and focus.
+
+---
+
+### 🎙️🖼️ 6. `example-05-webai03-multimodal` — Multimodal Web AI
+An advanced demonstration of Web AI that supports multimodal inputs, allowing users to attach images or audio files along with text queries to get richer contextual answers directly in the browser.
+
+---
+
 ## 🛠️ General Setup Instructions
 
 To run these projects locally, you will need [Node.js](https://nodejs.org/) installed.
@@ -113,10 +134,10 @@ To run these projects locally, you will need [Node.js](https://nodejs.org/) inst
    npm start
    ```
 
-### Setting up `exemplo-01-ecommerce-recomendations`
+### Setting up `example-01-ecommerce-recomendations`
 1. Navigate to the folder:
    ```bash
-   cd "fundamentals-of-ai-and-llms-for-programmers /exemplo-01-ecommerce-recomendations"
+   cd "fundamentals-of-ai-and-llms-for-programmers /example-01-ecommerce-recomendations"
    ```
 2. Install dependencies and start the static development server:
    ```bash
@@ -125,10 +146,10 @@ To run these projects locally, you will need [Node.js](https://nodejs.org/) inst
    ```
 3. Open `http://localhost:8080` in your browser.
 
-### Setting up `exemplo-02-vencendo-qualquer-jogo`
+### Setting up `example-02-vencendo-qualquer-jogo`
 1. Navigate to the folder:
    ```bash
-   cd "fundamentals-of-ai-and-llms-for-programmers /exemplo-02-vencendo-qualquer-jogo"
+   cd "fundamentals-of-ai-and-llms-for-programmers /example-02-vencendo-qualquer-jogo"
    ```
 2. Install dependencies:
    ```bash
@@ -139,6 +160,20 @@ To run these projects locally, you will need [Node.js](https://nodejs.org/) inst
    npm start
    ```
 4. Open `http://localhost:8080` to watch the AI automatically aim and shoot the ducks in real-time!
+
+### Setting up Web AI Examples (03, 04, 05)
+1. Navigate to the respective folder:
+   ```bash
+   cd "fundamentals-of-ai-and-llms-for-programmers /example-03-webai-01"
+   # or example-04-webai02-temperature-and-topK
+   # or example-05-webai03-multimodal
+   ```
+2. For examples 04 and 05, install dependencies and start the local development server:
+   ```bash
+   npm install
+   npm start
+   ```
+3. Open the provided `localhost` link in your browser. Example 03 can be run directly by opening `index.html` in the browser or using a simple static server.
 
 ---
 
